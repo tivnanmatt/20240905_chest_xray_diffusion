@@ -1,0 +1,12 @@
+conda create --name 20240903_nih_chest_xray
+conda activate 20240903_nih_chest_xray
+conda install -y python=3.10 pip ffmpeg
+conda install -y nvidia/label/cuda-12.4.1::cuda-toolkit
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+pip3 install numpy scipy matplotlib nibabel scikit-image pyyaml torch-ema
+pip3 install transformers diffusers
+pip3 install open_clip_torch==2.23.0
+pip3 install pandas
+pip3 install scikit-learn
+git clone https://github.com/tivnanmatt/laboratory.git
+pip3 install -e ./laboratory
